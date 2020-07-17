@@ -11,6 +11,7 @@ $(function () {
 
     // 从layui获取form
     var form = layui.form
+    console.log(form)
     var layer = layui.layer
 
     form.verify({
@@ -58,7 +59,6 @@ $(function () {
                     return layer.msg('登录失败')
                 }
                 layer.msg('登录成功')
-
                 localStorage.setItem('token', res.token)
                 location.href = '/index.html'
             }
